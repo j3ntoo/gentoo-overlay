@@ -19,6 +19,10 @@ DEPEND=">=app-i18n/fcitx-4.2.9:4[X,xkb]
 	virtual/libintl"
 RDEPEND="${DEPEND}"
 
+PATCHES=(
+	"${FILESDIR}/${P}-cmake-version.patch"
+)
+
 src_configure() {
 	local mycmakeargs=(
 		"-DENABLE_QT=no"
